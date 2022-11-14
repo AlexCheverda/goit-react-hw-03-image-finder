@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import { LineWave } from 'react-loader-spinner';
 import { Image } from './ImageGallaryItem.Styled';
 
 const ImageGallaryItem = ({ smImg, tags, onClick }) => {
