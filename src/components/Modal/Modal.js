@@ -1,4 +1,4 @@
-import PropTypes, { element } from 'prop-types';
+import PropTypes from 'prop-types';
 import { Component } from 'react';
 import { Overlay, ModalBox } from './Modal.Styled';
 
