@@ -56,11 +56,13 @@ class App extends Component {
         page: 1,
       });
     };
+
     loadMore = () => {
       this.setState(prevState => ({
         page: prevState.page + 1,
       }));
     };
+
     showModalImage = largeImageURL => {
       const image = this.state.images.find(
         image => image.largeImageURL === largeImageURL
@@ -89,7 +91,7 @@ class App extends Component {
           {isLoading && <Loader />}
           {images.length > 0 && (
             <>
-              <ImageGallery images={images} openModal={showModalImage} />
+              <ImageGallary images={images} openModal={showModalImage} />
               <Button loadMore={loadMore} />
             </>
           )}
