@@ -1,11 +1,11 @@
 import { Component } from "react";
 import { ToastContainer, toast } from "react-toastify";
-import 'react-toastify/dist/react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { Container } from './App.Styled';
 import { fetchImages } from "Api/Api";
 import { mapPictures } from "Api/mapPictures";
 import Searchbar from "components/Searchbar";
-import ImageGallary from "components/ImageGallary";
+import ImageGallery from "components/ImageGallery";
 import Button from "components/Button";
 import Modal from "components/Modal";
 import Loader from "components/Loader";
@@ -43,6 +43,7 @@ class App extends Component {
         this.setState({
           images: [...this.state.images, ...newImg],
         });
+      });
       } catch (error) {
         this.setState({ error });
       } finally {
@@ -91,7 +92,7 @@ class App extends Component {
           {isLoading && <Loader />}
           {images.length > 0 && (
             <>
-              <ImageGallary images={images} openModal={showModalImage} />
+              <ImageGallery images={images} openModal={showModalImage} />
               <Button loadMore={loadMore} />
             </>
           )}
@@ -118,6 +119,5 @@ class App extends Component {
       );
     }
   }
-}
 
 export default App;

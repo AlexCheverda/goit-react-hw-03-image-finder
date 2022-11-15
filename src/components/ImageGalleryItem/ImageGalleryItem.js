@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import { Image } from './ImageGallaryItem.Styled';
+import { Image } from './ImageGalleryItem.Styled';
 
-const ImageGallaryItem = ({ smImg, tags, onClick }) => {
+const ImageGalleryItem = ({ smImg, tags, onClick }) => {
     return (
         <li>
             <Image src={smImg} alt={tags} onClick={onClick} />
@@ -9,10 +9,10 @@ const ImageGallaryItem = ({ smImg, tags, onClick }) => {
     );
 };
 
-ImageGallaryItem.propTypes = {
+ImageGalleryItem.propTypes = {
     smImg: PropTypes.string.isRequired,
     tags: PropTypes.string.isRequired,
     onClick: PropTypes.func.isRequired,
 };
 
-export default ImageGallaryItem;
+export default ImageGalleryItem;
